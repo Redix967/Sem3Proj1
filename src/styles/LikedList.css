@@ -1,0 +1,63 @@
+/* ── LikedList ── */
+.liked-list {
+  margin-top: 0.5rem;
+}
+
+.liked-list__heading {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.liked-list__count {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--clr-accent);
+  color: #0f0e17;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liked-list__items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.liked-item {
+  background: var(--clr-surface);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 3px solid var(--clr-accent);
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+  transition: background 200ms ease;
+}
+
+.liked-item:hover {
+  background: var(--clr-surface-2);
+}
+
+.liked-item__quote {
+  font-size: 0.9rem;
+  color: var(--clr-text);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 0.35rem;
+}
+
+.liked-item__author {
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+}

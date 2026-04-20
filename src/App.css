@@ -1,0 +1,68 @@
+/* ── Design tokens ── */
+:root {
+  --clr-bg: #0f0e17;
+  --clr-surface: #1a1929;
+  --clr-surface-2: #252438;
+  --clr-accent: #e8c46a;
+  --clr-accent-soft: rgba(232, 196, 106, 0.12);
+  --clr-text: #fffffe;
+  --clr-text-muted: #a7a9be;
+  --clr-error: #ff6b6b;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 16px;
+  --shadow: 0 8px 40px rgba(0, 0, 0, 0.45);
+  --transition: 200ms ease;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* ── Layout ── */
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.app-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--clr-accent);
+}
+
+.liked-counter {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+  background: var(--clr-accent-soft);
+  border: 1px solid rgba(232, 196, 106, 0.25);
+  padding: 0.35rem 0.85rem;
+  border-radius: 99px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
